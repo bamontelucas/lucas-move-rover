@@ -63,6 +63,7 @@ void move(state *s, unsigned int width, unsigned int height) {
 }
 
 void moveRover(state *roverState, char *movements, unsigned int width, unsigned int height) {
+    // loop pela string, char by char
     char movement = movements[0];
     do{
         if(movement == 'M') {
@@ -74,6 +75,7 @@ void moveRover(state *roverState, char *movements, unsigned int width, unsigned 
 }
 
 void validate(char *outputFileName) {
+    // a ideia aqui é ler arquivos output e de teste ao mesmo tempo, comparando-os linha a linha
     FILE *output, *test;
     char outputStr[5], testStr[5];
     char ok = 1;
@@ -129,6 +131,8 @@ int main(int argc, char *argv[]) {
                  height, 
                  r = 0;
 
+    // tratando linha de comando
+    
     if(argc >= 2) {
         if(strcmp(argv[1], "-t") == 0) {
             testing = 1;
@@ -153,9 +157,12 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
+    // pego a primeira linha do arquivo
+    // coordenadas x,y máximas
     fscanf(input, "%i %i", &width, &height);
     
     while(!feof(input)) {
+        // loop pelo arquivo de input
         fscanf(input, "\n");
         if(feof(input)) {
             break;

@@ -28,3 +28,7 @@ Gera a saída em arquivo chamado *output.txt* no mesmo diretório do programa.
 
     moverover -t C:\saida.txt
 Utiliza o arquivo de teste como entrada e efetua rotina de teste após a execução. Gera a saída em *C:\saida.txt*
+
+## Compilando
+
+Basta ter um compilador C, como o gcc. Ex: `gcc -o moverover.exe moverover.c`
