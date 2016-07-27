@@ -31,5 +31,5 @@ Utiliza o arquivo de teste como entrada e efetua rotina de teste após a execuç
 
 ## Compilando
 
-Basta ter um compilador C, como o gcc. Ex: `gcc -o moverover.exe moverover.c`
+Basta ter um compilador C, como o gcc. Ex: `gcc -o moverover.exe moverover.c`.
 O arquivo `.exe` foi compilado em uma máquina Windows 10 x64
